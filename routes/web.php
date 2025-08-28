@@ -6,6 +6,8 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\SellerController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GuestCheckoutController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +22,8 @@ Route::middleware(['auth', 'role:buyer'])->group(function () {
     Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
     Route::get('/checkout/success/{orderId}', [OrderController::class, 'success'])->name('checkout.success');
     Route::get('/checkout/send/{orderId}', [OrderController::class, 'sendWhatsApp'])->name('checkout.sendWhatsApp');
+    Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews');
+    Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 });
 
 Route::middleware(['auth', 'role:seller'])->group(function () {
@@ -47,5 +51,8 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
     Route::post('/register', [RegisteredUserController::class, 'store']);
 });
+
+// Route::get('/guest-checkout', [GuestCheckoutController::class, 'index'])->name('guest-checkout');
+// Route::post('/guest-checkout/send', [GuestCheckoutController::class, 'sendWhatsApp'])->name('guest-checkout.send');
 
 Route::middleware(['auth'])->post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');

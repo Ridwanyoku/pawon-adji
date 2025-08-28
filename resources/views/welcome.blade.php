@@ -52,6 +52,20 @@
                 @endif
             @endforeach
         </div>
+
+            <div style="max-width: 800px; margin: 20px auto; padding: 20px;">
+        <section style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h2 style="color: #333; text-align: center;">Kata Mereka</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+                @foreach ($reviews as $review)
+                    <div style="flex: 1 1 200px; min-width: 200px; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">
+                        <p style="color: #666; margin: 0 0 5px 0;">{{ $review->comment }}</p>
+                        <h4 style="color: #333; margin: 0;">{{ $review->user->name }} - Rating: {{ $review->rating }} / 5</h4>
+                    </div>
+                @endforeach
+            </div>
+        </section>
+    </div>
     </main>
 </body>
 </html>
