@@ -17,7 +17,6 @@ Jika Anda menggunakan XAMPP, PHP, dan MySQL sudah menjadi satu paket di dalam ap
 ## Langkah-langkah Instalasi
 
 1. Clone repository ini dengan memilih tipe protokol HTTPS atau SSH. Jika belum memiliki setup SSH, bisa menggunakan HTTPS.
-```
 
 2. Instal seluruh packages yang dibutuhkan.
 
