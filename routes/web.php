@@ -8,6 +8,7 @@ use App\Http\Controllers\SellerController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GuestCheckoutController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\BuyerController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,8 @@ Route::middleware(['auth', 'role:buyer'])->group(function () {
     Route::get('/checkout/send/{orderId}', [OrderController::class, 'sendWhatsApp'])->name('checkout.sendWhatsApp');
     Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews');
     Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+    Route::get('/buyer/dashboard', [BuyerController::class, 'dashboard'])->name('buyer.dashboard');
+    Route::get('/buyer/account', [BuyerController::class, 'account'])->name('buyer.account');
 });
 
 Route::middleware(['auth', 'role:seller'])->group(function () {
