@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title }}</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
+<style>
 * {
     padding: 0;
     margin: 0;
@@ -851,16 +851,16 @@ footer {
             <div class="navbar-item" id="navbar-item">
                 <ul>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Beranda</a>
+                        <a class="nav-link" href="#home">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/pawon adji/index.html#kontak">Kontak</a>
+                        <a class="nav-link" href="#kontak">Kontak</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="menu.html">Menu</a>
+                        <a class="nav-link" href="#menu">Menu</a>
                     </li>
                     <li class="nav-item tas">
-                        <a class="nav-link cart" href="cart.html" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M2.31 11.243A1 1 0 0 1 3.28 10h17.44a1 1 0 0 1 .97 1.242l-1.811 7.243A2 2 0 0 1 17.939 20H6.061a2 2 0 0 1-1.94-1.515z"/><path stroke-linecap="round" d="M9 14v2m6-2v2m-9-6l4-6m8 6l-4-6"/></g></svg></a>
+                        <a class="nav-link cart" href="/cart" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M2.31 11.243A1 1 0 0 1 3.28 10h17.44a1 1 0 0 1 .97 1.242l-1.811 7.243A2 2 0 0 1 17.939 20H6.061a2 2 0 0 1-1.94-1.515z"/><path stroke-linecap="round" d="M9 14v2m6-2v2m-9-6l4-6m8 6l-4-6"/></g></svg></a>
                     </li>
                     <li class="nav-item">
                         @guest
@@ -873,7 +873,7 @@ footer {
             </div>  
         </div>
     </nav>
-    <div class="hero-img">
+    <div id="home" class="hero-img">
         <div class="container-hero-img">
             <h1>Selamat Datang di Pawon Adji</h1>
             <p>Nikmati berbagai hidangan lezat kami</p>
@@ -915,7 +915,7 @@ footer {
                     </div>
                 </div>
             </section>
-            <section class="menu">
+            <section id="menu" class="menu">
                 <div class="container-menu">
                     <div class="title-menu title">
                         <h2>Produk Kami</h2>
